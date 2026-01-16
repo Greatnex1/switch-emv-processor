@@ -16,9 +16,16 @@ public class AppUser {
     private Long id;
     private String username;
     private String password;
-    @Enumerated(EnumType.STRING)
+//    @ManyToOne
+//    @JoinColumn(name = "role_id")
+//    private Role role;
+
+
+        @Enumerated(EnumType.STRING) @Column(nullable = false)
     private RoleType role;
     @OneToOne(cascade = CascadeType.ALL) @JoinColumn(name = "wallet_id")
     private Wallet wallet;
+
+//    private boolean isEnabled;
 
 }
