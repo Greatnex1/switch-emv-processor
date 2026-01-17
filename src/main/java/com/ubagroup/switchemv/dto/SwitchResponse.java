@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SwitchResponse {
-
     private boolean approved;
     private String rrn;
     private String authCode;
